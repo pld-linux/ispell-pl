@@ -1,13 +1,14 @@
-Summary:	Polish dictionary for GNU ispell
-Summary(pl):	Polski s³ownik dla GNU ispell
+Summary:	Polish dictionary for ispell
+Summary(pl):	Polski s³ownik dla ispell
 Name:		ispell-pl
-Version:	20011004
+Version:	20021127
 Release:	1
 License:	LGPL
 Group:		Applications/Text
-Source0:	ftp://ftp.icm.edu.pl/pub/unix/polish-ispell/ispell-pl-%{version}.tar.gz
-Requires:	ispell
+Source0:	http://dl.sourceforge.net/ispell-pl/%{name}-%{version}.tar.gz
+URL:		http://ispell-pl.sourceforge.net/
 BuildRequires:	ispell
+Requires:	ispell
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	ispell-polish
 
@@ -15,9 +16,10 @@ Obsoletes:	ispell-polish
 Polish dictionary for ispell.
 
 %description -l pl
-Polski s³ownik dla programu ispell, pochodz±cy z programu s³ownikowego
-(patrz URL) W tym pakiecie znajdziesz s³ownik skompilowany wg
-nastêpuj±cej konfiguracji (slownik.cfg):
+Polski s³ownik dla programu ispell.
+
+W tym pakiecie znajduje siê s³ownik skompilowany wg nastêpuj±cej
+konfiguracji (slownik.cfg):
 
 X A
 X B
@@ -52,7 +54,7 @@ X	technika
 	zeglarstwo
 
 %prep
-%setup -q -n %{version}
+%setup -q
 
 %build
 cat > slowniki.cfg << EOF
@@ -89,10 +91,7 @@ X	technika
 	zeglarstwo
 EOF
 
-cp polish.dic.proto polish.dic
-./slowniki.pl
-%{_bindir}/buildhash polish.dic polish.aff polish.hash \
- && rm -f polish.dic polish.dic.cnt polish.dic.stat
+./zbuduj.slownik.sh
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -105,4 +104,5 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc CZYTAJ.TO Changelog slowniki.cfg
 %{_libdir}/ispell/*
