@@ -2,7 +2,7 @@ Summary:	Polish dictionary for ispell
 Summary(pl):	Polski s³ownik dla ispell
 Name:		ispell-pl
 Version:	20021127
-Release:	3
+Release:	4
 License:	GPL, but source URL and version must be specified
 Group:		Applications/Text
 Source0:	http://dl.sourceforge.net/ispell-pl/%{name}-%{version}.tar.gz
@@ -11,7 +11,6 @@ Patch0:		%{name}-posix.patch
 URL:		http://ispell-pl.sourceforge.net/
 BuildRequires:	ispell >= 3.2.06
 Requires:	ispell >= 3.2.06
-Obsoletes:	ispell-pl-alt
 Obsoletes:	ispell-polish
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
