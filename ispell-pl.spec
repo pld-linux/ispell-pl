@@ -3,7 +3,7 @@ Summary(pl):	Polski s³ownik dla ispell
 Name:		ispell-pl
 Version:	20021127
 Release:	1
-License:	LGPL
+License:	GPL, but source URL and version must be specified
 Group:		Applications/Text
 Source0:	http://dl.sourceforge.net/ispell-pl/%{name}-%{version}.tar.gz
 URL:		http://ispell-pl.sourceforge.net/
@@ -13,10 +13,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	ispell-polish
 
 %description
-Polish dictionary for ispell.
+Polish dictionary for ispell, built from tarball taken from
+http://dl.sourceforge.net/ispell-pl/.
 
 %description -l pl
-Polski s³ownik dla programu ispell.
+Polski s³ownik dla programu ispell, zbudowany z paczki ¶ci±gniêtej z
+http://dl.sourceforge.net/ispell-pl/.
 
 W tym pakiecie znajduje siê s³ownik skompilowany wg nastêpuj±cej
 konfiguracji (slownik.cfg):
