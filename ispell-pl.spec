@@ -16,90 +16,28 @@ Obsoletes:	ispell-polish
 Polish dictionary for ispell, built from tarball taken from
 http://dl.sourceforge.net/ispell-pl/.
 
+Build configuration (list of included subdictionaries) can be viewed
+in slowniki.cfg file in package documentation.
+
 %description -l pl
 Polski s³ownik dla programu ispell, zbudowany z paczki ¶ci±gniêtej z
 http://dl.sourceforge.net/ispell-pl/.
 
-W tym pakiecie znajduje siê s³ownik skompilowany wg nastêpuj±cej
-konfiguracji (slownik.cfg):
-
-X A
-X B
-X C
-X imiona-A
-X imiona-B
-X skroty
-
-S£OWNIKI FACHOWE:
-	biologia
-	chemia
-	druk
-	ekonomia
-	filozofia
-	fizyka
-	fizyka.ciala.stalego
-	geografia
-	historia
-X	informatyka
-	literatura
-	matematyka
-	medycyna
-	muzyka
-X	obce
-	polityka
-	prawo
-	religia
-	sport
-	sztuka
-X	technika
-	wulgarne
-	zeglarstwo
+Konfiguracjê (lista do³±czonych s³owników) mo¿na obejrzeæ w pliku
+slowniki.cfg z dokumentacji pakietu.
 
 %prep
 %setup -q
 
 %build
-cat > slowniki.cfg << EOF
-X	A
-X	B
-X	C
-X	imiona-A
-X	imiona-B
-X	skroty
-
-S£OWNIKI FACHOWE:
-	biologia
-	chemia
-	druk
-	ekonomia
-	filozofia
-	fizyka
-	fizyka.ciala.stalego
-	geografia
-	historia
-X	informatyka
-	literatura
-	matematyka
-	medycyna
-	muzyka
-X	obce
-	polityka
-	prawo
-	religia
-	sport
-	sztuka
-X	technika
-	wulgarne
-	zeglarstwo
-EOF
-
 ./zbuduj.slownik.sh
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_libdir}/ispell
-install polish.aff $RPM_BUILD_ROOT%{_libdir}/ispell/
-install polish.hash $RPM_BUILD_ROOT%{_libdir}/ispell/
+
+install polish.aff $RPM_BUILD_ROOT%{_libdir}/ispell
+install polish.hash $RPM_BUILD_ROOT%{_libdir}/ispell
 
 %clean
 rm -rf $RPM_BUILD_ROOT
