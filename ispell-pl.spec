@@ -1,6 +1,6 @@
 Summary:	Polish dictionary for GNU ispell
 Summary(pl):	Polski s³ownik dla GNU ispell
-Name:		ispell-polish
+Name:		ispell-pl
 Version:	20011004
 Release:	1
 License:	LGPL
