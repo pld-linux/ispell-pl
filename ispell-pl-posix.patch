@@ -1,0 +1,12 @@
+diff -urN ispell-pl-20021127.orig/zbuduj.slownik.sh ispell-pl-20021127.new/zbuduj.slownik.sh
+--- ispell-pl-20021127.orig/zbuduj.slownik.sh	2002-11-27 11:12:04.000000000 +0100
++++ ispell-pl-20021127.new/zbuduj.slownik.sh	2004-02-11 22:14:57.000000000 +0100
+@@ -20,5 +20,5 @@
+  [ -f fachowe/$i ] && ( echo "fachowy:$i"; cat fachowe/$i >> $TMPDIC )
+ done
+ 
+-sort +1 -nr $TMPDIC | cut -f1 > $SL_DIC && rm $TMPDIC
++sort -k 2 -nr $TMPDIC | cut -f1 > $SL_DIC && rm $TMPDIC
+ buildhash $SL_DIC $JEZ.aff $JEZ.hash && rm -f $SL_DIC $SL_DIC.{cnt,stat}
+\ Brak znaku nowej linii na koñcu pliku
+
