@@ -6,6 +6,7 @@ Release:	2
 License:	GPL, but source URL and version must be specified
 Group:		Applications/Text
 Source0:	http://dl.sourceforge.net/ispell-pl/%{name}-%{version}.tar.gz
+# Source0-md5: 91418bdae4b7a4eb6a8cc69be8e5787d
 URL:		http://ispell-pl.sourceforge.net/
 BuildRequires:	ispell >= 3.2.06
 Requires:	ispell >= 3.2.06
