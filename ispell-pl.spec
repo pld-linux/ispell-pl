@@ -1,5 +1,5 @@
 Summary:	Polish dictionary for ispell
-Summary(pl):	Polski s³ownik dla ispella
+Summary(pl.UTF-8):   Polski sÅ‚ownik dla ispella
 Name:		ispell-pl
 Version:	20021127
 Release:	4
@@ -21,11 +21,11 @@ http://dl.sourceforge.net/ispell-pl/.
 Build configuration (list of included subdictionaries) can be viewed
 in slowniki.cfg file in package documentation.
 
-%description -l pl
-Polski s³ownik dla programu ispell, zbudowany z paczki ¶ci±gniêtej z
+%description -l pl.UTF-8
+Polski sÅ‚ownik dla programu ispell, zbudowany z paczki Å›ciÄ…gniÄ™tej z
 http://dl.sourceforge.net/ispell-pl/.
 
-Konfiguracjê (lista do³±czonych s³owników) mo¿na obejrzeæ w pliku
+KonfiguracjÄ™ (lista doÅ‚Ä…czonych sÅ‚ownikÃ³w) moÅ¼na obejrzeÄ‡ w pliku
 slowniki.cfg z dokumentacji pakietu.
 
 %prep
