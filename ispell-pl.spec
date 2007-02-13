@@ -1,5 +1,5 @@
 Summary:	Polish dictionary for ispell
-Summary(pl.UTF-8):   Polski słownik dla ispella
+Summary(pl.UTF-8):	Polski słownik dla ispella
 Name:		ispell-pl
 Version:	20021127
 Release:	4
