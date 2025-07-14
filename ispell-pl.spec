@@ -30,7 +30,7 @@ slowniki.cfg z dokumentacji pakietu.
 
 %prep
 %setup -q
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 ./zbuduj.slownik.sh
