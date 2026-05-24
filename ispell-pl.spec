@@ -2,7 +2,7 @@ Summary:	Polish dictionary for ispell
 Summary(pl.UTF-8):	Polski słownik dla ispella
 Name:		ispell-pl
 Version:	20021127
-Release:	4
+Release:	5
 License:	GPL, but source URL and version must be specified
 Group:		Applications/Text
 Source0:	http://dl.sourceforge.net/ispell-pl/%{name}-%{version}.tar.gz
